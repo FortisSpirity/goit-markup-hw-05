@@ -16,7 +16,6 @@
 </head>
 
 <body>
-    <div class="to">o</div>
     <header class="header">
         <div class="container">
             <div class="header-menu">
@@ -72,7 +71,7 @@
                     <h1 class="header-content__title">
                         Effective Solutions for Your Business
                     </h1>
-                    <button class="header-content__button" type="button">
+                    <button class="header-content__button" type="button" data-modal-open>
                         Order Service
                     </button>
                 </div>
@@ -456,6 +455,18 @@
             </div>
         </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-close__btn" type="button" data-modal-close>
+                <svg class="modal-close__svg">
+                    <use class="modal-close__icon" href="./images/icon.svg/icons-svg.svg#icon-modal__close-btn"></use>
+                </svg>
+            </button>
+        </div>
+
+
+        <script src="js/modal.js"></script>
 </body>
 
 </html>
