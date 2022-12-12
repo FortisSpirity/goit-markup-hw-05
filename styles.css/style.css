@@ -125,19 +125,38 @@ body {
 .menu-link::after {
     position: absolute;
     content: "";
-    width: 78px;
+    width: 100%;
     height: 4px;
     background-color: #4d5ae5;
     bottom: -110%;
-    left: -4px;
+    left: 0;
     visibility: hidden;
     border-radius: 2px;
+    transition: visibility 250ms ease;
+}
+
+.menu-active {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #4d5ae5;
+    bottom: -110%;
+    left: 0;
+    border-radius: 2px;
+    transition: visibility 250ms ease;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    display: block;
+    padding: 0 16px;
 }
 
 .menu-link:hover::after,
 .menu-link:focus::after {
     visibility: visible;
-    transition: all 0.3s ease;
+    transition: visibility 250ms ease;
 }
 
 .menu-item + .menu-item {
@@ -145,17 +164,20 @@ body {
 }
 
 .menu-link {
+    position: relative;
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    display: block;
+    padding: 0 16px;
+    transition: all 250ms ease;
 }
 
 .menu-link:hover,
 .menu-link:focus {
     color: #4d5ae5;
-    transition: all 0.5s;
 }
 
 .header-contacts {
@@ -200,27 +222,14 @@ body {
     letter-spacing: 0.02em;
     color: #434455;
     display: block;
-}
-
-/* .header-contacts__link:hover,
-.header-contacts__link:focus {
-    color: #4d5ae5;
     transition: all 0.3s ease;
-    fill: #4d5ae5;
-} */
+}
 
 .header-contacts__link:hover,
 .header-contacts__icon:hover {
     color: #4d5ae5;
-    transition: all 0.3s ease;
     fill: #4d5ae5;
 }
-
-/* .header-contacts__icon:hover {
-    fill: #4d5ae5;
-    transition: all 0.3s ease;
-    color: #4d5ae5;
-} */
 
 .header-content {
     margin: 0 auto;
@@ -270,6 +279,7 @@ body {
     padding: 16px 32px;
     margin-top: 48px;
     border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 .header-content__button:hover,
@@ -277,7 +287,6 @@ body {
     background-color: #404bbf;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    transition: all 0.3s ease;
 }
 
 .header-content__subtitle {
@@ -404,12 +413,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease;
 }
 
 .team-list__link:hover,
 .team-list__link:focus {
     background-color: #31d0aa;
-    transition: all 0.3s ease;
 }
 .team-list__icon,
 .social-media__icon {
@@ -448,12 +457,12 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    transition: all 0.3s ease;
 }
 .costumers-item__link:hover,
 .costumers-item__link:focus {
     fill: #4d5ae5;
     border: 1px solid #4d5ae5;
-    transition: all 0.3s ease;
 }
 /*Main-Content*/
 
@@ -524,7 +533,7 @@ body {
 .footer-list__link:hover,
 .footer-list__link:focus {
     background-color: #31d0aa;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .footer-list__icon {
@@ -557,7 +566,6 @@ body {
     border-radius: 4px;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
-    transition: all 0.3s;
 }
 
 .portfolio-filter__button {
@@ -567,6 +575,7 @@ body {
     color: #4d5ae5;
     padding: 12px 24px;
     border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 .active {
@@ -576,7 +585,6 @@ body {
     border-radius: 4px;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
-    transition: all 0.3s;
 }
 
 .portfolio-filter__list {
@@ -605,7 +613,7 @@ body {
 .portfolio-item:focus {
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 1px 6px rgba(46, 47, 66, 0.08);
-    transition: all 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 .portfolio-item__link-content {
@@ -667,6 +675,7 @@ body {
     left: 0;
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.5);
+    transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 .backdrop.is-hidden {
     opacity: 0;
