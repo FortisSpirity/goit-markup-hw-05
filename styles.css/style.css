@@ -179,7 +179,7 @@ body {
     letter-spacing: 0.02em;
     color: #2e2f42;
     display: block;
-    padding: 0 16px;
+    padding: 0 6px;
     transition: all 250ms ease;
 }
 
@@ -275,6 +275,7 @@ body {
 }
 
 .header-content__button {
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     line-height: 1.19;
     color: #ffffff;

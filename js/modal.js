@@ -11,4 +11,12 @@
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
   }
+
+
+  document.querySelectorAll(".menu-link").forEach((el) => {
+    if (window.location.pathname.indexOf(el.getAttribute("href")) > -1) {
+        el.classList.add("active-link");
+    }
+});
+
 })();
